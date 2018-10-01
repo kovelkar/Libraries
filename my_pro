@@ -52,7 +52,7 @@ yum install httpd httpd-devel gcc -y
 make
 make install
 
-cd /etc/httpd/conf.d
+cd /etc/httpd/conf
 vim mod-jk.conf
 
 LoadModule jk_module modules/mod_jk.so
