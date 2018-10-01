@@ -43,7 +43,9 @@ flush privileges;
 
 mod_jk.so
 
-wget  http://www-us.apache.org/dist/tomcat/tomcat-connectors/jk/tomcat-connectors-1.2.43-src.tar.gz
+#wget  http://www-us.apache.org/dist/tomcat/tomcat-connectors/jk/tomcat-connectors-1.2.43-src.tar.gz
+
+wget http://www-us.apache.org/dist/tomcat/tomcat-connectors/jk/tomcat-connectors-1.2.44-src.tar.gz
 cd native
 yum install httpd httpd-devel gcc -y
 ./configure --with-apxs=/usr/bin/apxs
