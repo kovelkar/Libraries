@@ -41,3 +41,28 @@ grant all privileges on studentapp.* to 'student'@'%' identified by 'student@1';
 flush privileges;
 
 
+mod_jk.so
+
+wget  http://www-us.apache.org/dist/tomcat/tomcat-connectors/jk/tomcat-connectors-1.2.43-src.tar.gz
+cd native
+yum install httpd httpd-devel gcc -y
+./configure --with-apxs=/usr/bin/apxs
+make
+make install
+
+cd /etc/httpd/conf.d
+vim mod-jk.conf
+
+LoadModule jk_module modules/mod_jk.so
+
+JkWorkersFile conf.d/worker.properties
+JkMount /student local
+JkMount /student/* local
+
+worker.properties
+worker.list=local
+worker.local.host=localhost
+worker.local.port=8009
+
+
+
