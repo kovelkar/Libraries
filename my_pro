@@ -18,7 +18,7 @@ context.xml
 
 Student App war file
 
-  https://github.com/shathagna/Libraries/blob/master/student.war
+  wget https://github.com/cit-aliqui/APP-STACK/raw/master/mysql-connector-java-5.1.40.jar
 
 AddressBook war file
 
